@@ -1,0 +1,25 @@
+{
+  "name": "krakenjs-angular2",
+  "version": "1.0.0",
+  "description": "Example application using angular2 and krakenjs ",
+  "main": "index.js",
+  "scripts": {
+    "test": "moch tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/subeeshcbabu/krakenjs-angular2.git"
+  },
+  "keywords": [
+    "angular2",
+    "kraken-js",
+    "krakenjs",
+    "angular"
+  ],
+  "author": "subeesh chothendavida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/subeeshcbabu/krakenjs-angular2/issues"
+  },
+  "homepage": "https://github.com/subeeshcbabu/krakenjs-angular2#readme"
+}
