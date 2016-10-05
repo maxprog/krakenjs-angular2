@@ -1,0 +1,17 @@
+{
+    "specialization": {
+    },
+
+    "middleware": {
+        "static": {
+            "module": {
+                "arguments": [ "path:./client" ]
+            }
+        },
+        "router": {
+            "module": {
+                "arguments": [{ "directory": "path:./routes" }]
+            }
+        }
+    }
+}
