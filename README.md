@@ -6,8 +6,8 @@ This application adds the Angular2 features only at the client side. For angular
 
 ## Features
 
-- Uses `kraken-js` at the server side to serve data mostly for Ajax requests from client.
-- Uses `webpack` instead of teh angular2 recommended `systemjs` as the module loader.
+- `kraken-js` at the server side to serve data (mostly for Ajax requests from client).
+- Uses `webpack` instead of the angular2 recommended `systemjs` as the module loader.
 - Clear separation of server and client code base
 
 
