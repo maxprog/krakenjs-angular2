@@ -36,3 +36,6 @@ Thumbs.db
 .Trashes
 
 test/temp
+client/main.js
+client/polyfill.js
+typings

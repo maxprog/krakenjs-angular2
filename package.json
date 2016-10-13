@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "ava test",
-    "start": "node server",
-    "lint": "eslint ."
+    "start": "npm run build && node server",
+    "lint": "eslint .",
+    "postinstall": "typings install",
+    "build": "tsc && webpack",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
@@ -29,9 +34,22 @@
     "kraken-js": "^2.1.0"
   },
   "devDependencies": {
+    "@angular/common": "^2.0.2",
+    "@angular/compiler": "^2.0.2",
+    "@angular/core": "^2.0.2",
+    "@angular/platform-browser": "^2.0.2",
+    "@angular/platform-browser-dynamic": "^2.0.2",
+    "angular2-template-loader": "^0.5.0",
     "ava": "^0.16.0",
+    "awesome-typescript-loader": "^2.2.4",
     "eslint": "^3",
     "mocha": "^3.1.0",
-    "supertest": "^2.0.0"
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "^5.0.0-beta.12",
+    "supertest": "^2.0.0",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0",
+    "webpack": "^1.13.2",
+    "zone.js": "^0.6.25"
   }
 }

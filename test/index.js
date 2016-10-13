@@ -24,10 +24,10 @@ Test.cb.afterEach(t => {
 
 Test.cb('index', t => {
     Request(mock)
-        .get('/')
+        .get('/index')
         .expect(200)
-        .expect('Content-Type', /html/)
-        .expect(/"name": "index"/)
+        .expect('Content-Type', /application\/json/)
+        .expect(/{"name":"index"}/)
         .end((err, res) => {
             t.end(err);
         });
