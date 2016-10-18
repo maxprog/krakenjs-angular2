@@ -39,3 +39,5 @@ test/temp
 client/main.js
 client/polyfill.js
 typings
+client/app/*.js
+client/app/*.map
