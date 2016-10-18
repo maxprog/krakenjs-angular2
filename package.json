@@ -21,7 +21,10 @@
     "angular2",
     "kraken-js",
     "krakenjs",
-    "angular"
+    "angular",
+    "webpack",
+    "kraken angular",
+    "express"
   ],
   "author": "subeesh chothendavida",
   "license": "MIT",

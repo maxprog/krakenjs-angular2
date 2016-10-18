@@ -1,6 +1,10 @@
 module.exports = {
     entry: {
-        polyfill: [ './node_modules/zone.js', './node_modules/reflect-metadata', './node_modules/rxjs' ],
+        polyfill: [
+            './node_modules/zone.js',
+            './node_modules/reflect-metadata',
+            './node_modules/rxjs' 
+        ],
         main: './client/app/main.ts'
     },
 
