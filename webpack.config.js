@@ -1,9 +1,11 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
     entry: {
         polyfill: [
             './node_modules/zone.js',
             './node_modules/reflect-metadata',
-            './node_modules/rxjs' 
+            './node_modules/rxjs'
         ],
         main: './client/app/main.ts'
     },
@@ -21,13 +23,19 @@ module.exports = {
             {
                 test: /\.ts$/,
                 loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+            },
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract(['css?sourceMap', 'sass?sourceMap'])
+            },
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract(['css?sourceMap'])
             }
-            // ,
-            // {
-            //    loaders: ['style', 'css'],
-            //    test: /\.css$/,
-            //    exclude: /\.useable\.css$/
-            // }
        ]
     }
+    ,
+    plugins: [
+        new ExtractTextPlugin('./client/[name].css')
+    ]
 };

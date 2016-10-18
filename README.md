@@ -9,6 +9,26 @@ This application adds the Angular2 features only at the client side. For angular
 - `kraken-js` at the server side to serve data (mostly for Ajax requests from client).
 - Uses `webpack` instead of the angular2 recommended `systemjs` as the module loader.
 - Clear separation of server and client code base
+- `SASS` stylesheet extension and webpack sass loader integration.
+
+## Pre-requisites
+
+- Node version should be v6+
+- NPM version should be 3+
+
+## Usage
+
+```sh
+
+    > git clone https://github.com/subeeshcbabu/krakenjs-angular2.git
+    > cd krakenjs-angular2
+    > npm i
+    > npm run typings install (If typings are not installed by default)
+    > npm start (This executes, npm run build && node server. tsc && webpack are executed as part of npm run build)
+
+```
+
+Application can be accessible at http://localhost:8000
 
 
 ## Project skeleton
