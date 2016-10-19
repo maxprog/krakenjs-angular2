@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Path = require('path');
 
 module.exports = {
     entry: {
@@ -25,6 +26,10 @@ module.exports = {
                 loaders: ['awesome-typescript-loader', 'angular2-template-loader']
             },
             {
+                test: /\.html$/,
+                loader: 'html'
+            },
+            {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract(['css?sourceMap', 'sass?sourceMap'])
             },
@@ -37,5 +42,8 @@ module.exports = {
     ,
     plugins: [
         new ExtractTextPlugin('./client/[name].css')
-    ]
+    ],
+    htmlLoader: {
+        root: Path.resolve(__dirname, 'client/app/header')
+    }
 };
