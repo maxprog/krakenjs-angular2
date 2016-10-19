@@ -2,6 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app',
-    template: '<h1>Krakenjs-Angular2 example app</h1>'
+    template: `
+        <appheader></appheader>
+        <main class="page-content" aria-label="Content">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </main>
+        <appfooter></appfooter>
+    `
 })
-export class AppComponent { }
+export class AppComponent {
+    content = "Welcome to Krakenjs Angular2 example application!";
+}
