@@ -12,7 +12,7 @@ module.exports = {
     },
 
     output: {
-        filename: './client/[name].js'
+        filename: './bundle/[name].js'
     },
 
     resolve: {
@@ -41,9 +41,9 @@ module.exports = {
     }
     ,
     plugins: [
-        new ExtractTextPlugin('./client/[name].css')
+        new ExtractTextPlugin('./bundle/[name].css')
     ],
     htmlLoader: {
-        root: Path.resolve(__dirname, 'client/app/header')
+        root: Path.resolve(__dirname, 'client/app')
     }
 };

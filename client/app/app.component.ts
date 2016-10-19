@@ -13,5 +13,5 @@ import { Component } from '@angular/core';
     `
 })
 export class AppComponent {
-    content = "Welcome to Krakenjs Angular2 example application!";
+    content = 'Welcome to Krakenjs Angular2 example application!';
 }

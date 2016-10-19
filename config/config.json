@@ -5,7 +5,7 @@
     "middleware": {
         "static": {
             "module": {
-                "arguments": [ "path:./client" ]
+                "arguments": [ "path:./bundle" ]
             }
         },
         "router": {

@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'appfooter',
     template:
-    `
-    <footer class="site-footer">
+    `<footer class="site-footer">
         <div class="wrapper">
             <h2 class="footer-heading">Created By: {{author}}</h2>
                 <div class="footer-col-wrapper">
@@ -16,8 +15,7 @@ import { Component } from '@angular/core';
                   </div>
                 </div>
         </div>
-    </footer>
-    `
+    </footer>`
 })
 export class FooterComponent {
     author = 'Subeesh Chothendavida';

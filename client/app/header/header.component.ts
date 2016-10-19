@@ -1,5 +1,20 @@
 import { Component } from '@angular/core';
 
+const pages = [
+    {
+        title: 'KrakenJs',
+        url: 'http://krakenjs.com/'
+    },
+    {
+        title: 'Angular2',
+        url: 'https://angular.io/'
+    },
+    {
+        title: 'Webpack',
+        url: 'https://webpack.github.io/'
+    }
+];
+
 @Component({
     selector: 'appheader',
     template: `
@@ -24,18 +39,5 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponet {
     title = 'Krakenjs-Angular2 example app';
-    pages = [
-        {
-            title: 'KrakenJs',
-            url: 'http://krakenjs.com/'
-        },
-        {
-            title: 'Angular2',
-            url: 'https://angular.io/'
-        },
-        {
-            title: 'Webpack',
-            url: 'https://webpack.github.io/'
-        }
-    ];
+    pages = pages;
 }
