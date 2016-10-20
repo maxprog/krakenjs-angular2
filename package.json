@@ -34,7 +34,8 @@
   "homepage": "https://github.com/subeeshcbabu/krakenjs-angular2#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "kraken-js": "^2.1.0"
+    "kraken-js": "^2.1.0",
+    "serve-static": "^1.11.1"
   },
   "devDependencies": {
     "@angular/common": "^2.0.2",
@@ -60,6 +61,9 @@
     "typescript": "^2.0.3",
     "typings": "^1.4.0",
     "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.0",
+    "webpack-merge": "^0.15.0",
     "zone.js": "^0.6.25"
   }
 }

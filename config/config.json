@@ -5,6 +5,12 @@
     "middleware": {
         "static": {
             "module": {
+                "arguments": [ "path:./web" ]
+            }
+        },
+        "static-bundle": {
+            "module": {
+                "name": "serve-static",
                 "arguments": [ "path:./bundle" ]
             }
         },

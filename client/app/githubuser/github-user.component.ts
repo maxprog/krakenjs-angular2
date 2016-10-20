@@ -16,6 +16,6 @@ import { Component } from '@angular/core';
 export class GithubUserComponent {
     username:string = '';
     onKeyUp(ev):void {
-        console.log("==ev", ev);
+
     }
 }
