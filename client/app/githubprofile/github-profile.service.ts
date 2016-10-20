@@ -14,26 +14,15 @@ export class GithubProfileService {
     constructor(private http:Http) {}
 
     getProfile(username:string):Promise<User> {
-
-        // let user = new User()
-        // //Mock data. Replace this with service call.
-        // user.name = 'subeesh babu';
-        // user.login = username;
-        // user.id = 1707119;
-        // user.avatar_url = "https://avatars.githubusercontent.com/u/1707119?v=3";
-        // user.html_url = "https://github.com/subeeshcbabu";
         if (username) {
             return this.http.get(`${GITHUB_API}${username}`)
                 .filter(resp => resp.status === 200)
                 .toPromise()
-                .then(resp => {
-                    console.log('==>', username, resp.json());
-                    return resp.json() as User
-                })
-                .catch(error => Promise.resolve(new User()));
+                .then(resp => resp.json() as User)
+                .catch(error => Promise.resolve(new User())); //Ignore API fetch errors and return an empty User object.
         } else {
+            //If no username return an empty User
             return Promise.resolve(new User());
         }
-
     }
 }
