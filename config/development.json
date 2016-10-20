@@ -6,8 +6,7 @@
                 "arguments": [
                     "require:./webpack-util",
                     {
-                        "publicPath": "/",
-                        "noInfo": true,
+                        "publicPath": "/",    
                         "stats": {
                             "colors": true,
                             "chunks": false,

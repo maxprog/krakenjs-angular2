@@ -36,9 +36,9 @@ Thumbs.db
 .Trashes
 
 test/temp
-bundle/main.css
-bundle/main.js
-bundle/polyfill.js
+bundle
 typings
+client/*.js
+client/*.map
 client/app/**/*.js
 client/app/**/*.map

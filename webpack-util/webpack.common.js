@@ -1,4 +1,5 @@
 const Path = require('path');
+const Webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -27,6 +28,11 @@ module.exports = {
             }
        ]
     },
+    plugins: [
+        new Webpack.optimize.CommonsChunkPlugin({
+            name: ['app', 'vendor', 'polyfills']
+        })
+    ],
     htmlLoader: {
         root: Path.resolve(__dirname, 'client/app')
     }

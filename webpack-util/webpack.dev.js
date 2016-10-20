@@ -5,14 +5,17 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = WebpackMerge(CommonConfig, {
     entry: {
-        polyfill: [
-            'zone.js',
-            'reflect-metadata',
-            'rxjs',
+        vendor: [
+            './client/vendor.ts',
             'webpack-hot-middleware/client',
             'webpack/hot/dev-server'
         ],
-        main: [
+        polyfills: [
+            './client/polyfills.ts',
+            'webpack-hot-middleware/client',
+            'webpack/hot/dev-server'
+        ],
+        app: [
             './client/app/main.ts',
             'webpack-hot-middleware/client',
             'webpack/hot/dev-server'
