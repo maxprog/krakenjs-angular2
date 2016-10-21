@@ -35,7 +35,7 @@
   "dependencies": {
     "express": "^4.14.0",
     "kraken-js": "^2.1.0",
-    "serve-static": "^1.11.1"
+    "lokijs": "^1.4.1"
   },
   "devDependencies": {
     "@angular/common": "^2.0.2",

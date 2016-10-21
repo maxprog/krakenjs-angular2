@@ -6,7 +6,7 @@
                 "arguments": [
                     "require:./webpack-util",
                     {
-                        "publicPath": "/",    
+                        "publicPath": "/",
                         "stats": {
                             "colors": true,
                             "chunks": false,
@@ -25,7 +25,7 @@
                 ]
             }
         },
-        "static-bundle": {
+        "static": {
             "enabled": false
         }
     }

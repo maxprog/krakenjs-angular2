@@ -5,13 +5,18 @@
     "middleware": {
         "static": {
             "module": {
-                "arguments": [ "path:./web" ]
+                "arguments": [ "path:./bundle" ]
             }
         },
-        "static-bundle": {
+        "appsec": {
             "module": {
-                "name": "serve-static",
-                "arguments": [ "path:./bundle" ]
+                "arguments": [
+                    {
+                        "csrf": {
+                            "angular": true
+                        }
+                    }
+                ]
             }
         },
         "router": {
