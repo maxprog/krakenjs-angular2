@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
         <main class="page-content" aria-label="Content">
             <div class="wrapper">
                 <ul class="nav nav-pills pagenav">
-                    <li role="presentation" class="active"><a routerLink="/home">Home</a></li>
-                    <li role="presentation" class="disabled"><a href="#">Profile</a></li>
-                    <li role="presentation" class="disabled"><a href="#">Dashboard</a></li>
+                    <li role="presentation" routerLinkActive="active"><a routerLink="/home">Home</a></li>
+                    <li role="presentation" [class.disabled]="!routerLinkActive"><a href="#">Profile</a></li>
+                    <li role="presentation" [class.disabled]="!routerLinkActive"><a href="#">Dashboard</a></li>
                 </ul>
                 <router-outlet></router-outlet>
           </div>
