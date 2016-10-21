@@ -1,5 +1,5 @@
 /**
- * This inmemory db is only for tuturial/example purpose.
+ * This inmemory db is only for tutorial/example purpose.
  * For real use case and production ready environment use products like redis, mongodb etc.
  * This assumes
  */

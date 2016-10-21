@@ -3,7 +3,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { RouterModule } from  '@angular/router';
 //Components
 import { AppComponent } from './components/app.component';
 import { HeaderComponet } from './components/header/header.component';
@@ -19,7 +19,22 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        RouterModule.forRoot([
+            {
+                path: 'home',
+                component: GithubUserComponent
+            },
+            {
+                path: 'profile/:login',
+                component: GithubProfileComponent
+            },
+            {
+                path: '',
+                redirectTo: '/home',
+                pathMatch: 'full'
+            }
+        ])
     ],
     declarations: [
         AppComponent,

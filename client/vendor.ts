@@ -5,6 +5,7 @@ import '@angular/core';
 import '@angular/common';
 import '@angular/forms';
 import '@angular/http';
+import '@angular/router';
 import 'angular2-cookie';
 // RxJS
 import 'rxjs';
