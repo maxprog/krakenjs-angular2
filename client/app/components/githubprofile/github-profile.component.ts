@@ -15,7 +15,7 @@ import { Subject } from 'rxjs/Subject';
             </a>
         </div>
         <h3 *ngIf="userData.name" class="text-center">{{userData.name}}</h3>
-        <button *ngIf="userData.name && !profilePage" (click)="onClick(userData)" type="button" class="center-block btn btn-primary marg">{{userData.inmemory? "Edit Profile" : "Build Profile"}}</button>
+        <button *ngIf="userData.login && !profilePage" (click)="onClick(userData)" type="button" class="center-block btn btn-primary marg">{{userData.inmemory? "Edit Profile" : "Build Profile"}}</button>
         <div *ngIf="profilePage">
 
         </div>

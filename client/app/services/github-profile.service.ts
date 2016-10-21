@@ -56,15 +56,15 @@ export class GithubProfileService {
         }
         //First call the internal API to get the inmemory db data.
         return this.getProfileFromInMemory(username)
-            .map(user => {
+            .switchMap(user => {
                 if (user && user.login) {
                     //If the Internal API call found the user, return the value
-                    return user;
+                    return Observable.of(user);
                 }
                 //get the profile data from guthub
                 return this.getProfileFromGithub(username)
             })
             //get the profile data from guthub
-            .catch(() => this.getProfileFromGithub(username))
+            .catch(() => this.getProfileFromGithub(username));
     }
 }
