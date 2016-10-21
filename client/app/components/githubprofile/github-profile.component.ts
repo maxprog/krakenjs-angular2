@@ -8,21 +8,24 @@ import { Subject } from 'rxjs/Subject';
 
 @Component({
     selector: 'githubprofile',
-    template: `<div *ngFor="let userData of user | async" class="githubprofile">
-        <div *ngIf="userData.avatar_url">
+    template: `<div *ngFor="let userData of user | async" class="profile">
+        <div class="prf-pdng" *ngIf="userData.avatar_url">
             <a href="{{userData.html_url}}">
                 <img src="{{userData.avatar_url}}" class="center-block img-responsive img-thumbnail" alt="{{userData.name}}" width="200px"/>
             </a>
         </div>
         <h3 *ngIf="userData.name" class="text-center">{{userData.name}}</h3>
         <button *ngIf="userData.login && !profilePage" (click)="onClick(userData)" type="button" class="center-block btn btn-primary marg">{{userData.inmemory? "Edit Profile" : "Build Profile"}}</button>
-        <div *ngIf="profilePage">
+        <div *ngIf="profilePage" class="prf-pdng">
 
         </div>
     </div>`,
     styles: [`
-        .githubprofile {
+        .prf-pdng {
             margin: 20px;
+        }
+        .profile {
+            margin-bottom: 20px;
         }
     `]
 })

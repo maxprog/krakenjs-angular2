@@ -2,6 +2,7 @@ let ProfileModel = require('../models/profile');
 const InMemoryDB = require('../inmemorydb');
 
 function getProfile (req, res) {
+
     let model = {};
     let user;
     if (req.query && req.query.login) {

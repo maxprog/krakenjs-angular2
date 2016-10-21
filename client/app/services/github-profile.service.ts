@@ -38,13 +38,13 @@ export class GithubProfileService {
         this.cookieService.remove('XSRF-TOKEN');
         return this.http.get(`${GITHUB_API}${username}`)
             .filter(resp => resp.status === 200)
-            .map(resp => {
+            .switchMap(resp => {
                 let user = resp.json() as User;
                 //Reset the token after API call.
                 this.cookieService.put('XSRF-TOKEN', token);
                 //Persist the user details to inmemory db
-                this.saveProfileToInMemory(user);
-                return user;
+                return this.saveProfileToInMemory(user);
+
             })
             .catch(() => Observable.of(new User())); //Ignore API fetch errors and return an empty User object.
     }
