@@ -8,8 +8,8 @@ This application adds the Angular2 features only at the client side. For angular
 
 - `kraken-js` at the server side to serve data (mostly serves Ajax requests from client).
 - Clear separation of server and client code base
-- Illustrates Angular2 Services using Github APIs and In-memory database services
-- Illustrates Angular2 Routing.
+- Illustrates Angular2 `Services`, using Github APIs and In-memory database (Service side) services
+- Illustrates Angular2 `Routing`.
 - Examples of Angular2 user input, forms and two-way binding.
 - Uses `webpack` instead of the `systemjs` (angular2 recommended) as the module loader.
 - `SASS` stylesheet extension and webpack sass loader integration.
