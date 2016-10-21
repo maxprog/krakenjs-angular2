@@ -7,4 +7,5 @@ export class User {
     blog: string;
     login: string;
     name:string;
+    inmemory:boolean;
 }

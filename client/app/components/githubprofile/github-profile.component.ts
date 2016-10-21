@@ -1,11 +1,8 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { User } from '../user/user';
-import { GithubProfileService } from './github-profile.service';
+import { User } from '../../user/user';
+import { GithubProfileService } from '../../services/github-profile.service';
 
 @Component({
-    providers: [
-        GithubProfileService
-    ],
     selector: 'githubprofile',
     template: `<div *ngIf="user" class="githubprofile">
         <div *ngIf="user.avatar_url">
@@ -14,6 +11,7 @@ import { GithubProfileService } from './github-profile.service';
             </a>
         </div>
         <h3 *ngIf="user.name" class="text-center">{{user.name}}</h3>
+        <button *ngIf="user.name" (click)="onClick(user)" type="button" class="center-block btn btn-primary marg">{{buttonText}}</button>
     </div>`,
     styles: [`
         .githubprofile {
@@ -26,6 +24,7 @@ export class GithubProfileComponent implements OnChanges {
     username:string;
 
     user:User;
+    buttonText:string;
 
     constructor(private profileService:GithubProfileService) {}
 
@@ -33,10 +32,17 @@ export class GithubProfileComponent implements OnChanges {
         this.fetchProfileData();
     }
 
+    onClick(user:User): void {
+
+    }
+
     fetchProfileData():void {
         this.profileService
             .getProfile(this.username)
-            .then(user => this.user = user)
+            .then(user => {
+                this.user = user;
+                this.buttonText = (this.user.inmemory) ? 'Edit Dashboard' : 'Build Dashboard';
+            })
             .catch(error => console.log(error));//Replace the log with error handling
     }
 }

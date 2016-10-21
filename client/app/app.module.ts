@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 //Components
-import { AppComponent } from './app.component';
-import { HeaderComponet } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { GithubUserComponent } from './githubuser/github-user.component';
-import { GithubProfileComponent } from './githubprofile/github-profile.component'
+import { AppComponent } from './components/app.component';
+import { HeaderComponet } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { GithubUserComponent } from './components/githubuser/github-user.component';
+import { GithubProfileComponent } from './components/githubprofile/github-profile.component'
+
+//Services
+import { GithubProfileService } from './services/github-profile.service';
+import { CookieService } from 'angular2-cookie/services/cookies.service';
 
 @NgModule({
     imports: [
@@ -23,6 +27,10 @@ import { GithubProfileComponent } from './githubprofile/github-profile.component
         FooterComponent,
         GithubUserComponent,
         GithubProfileComponent
+    ],
+    providers: [
+        GithubProfileService,
+        CookieService
     ],
     bootstrap: [
         AppComponent
