@@ -26,6 +26,9 @@
     "kraken angular",
     "express"
   ],
+  "engines" : {
+    "node" : "6"
+  },
   "author": "subeesh chothendavida",
   "license": "MIT",
   "bugs": {

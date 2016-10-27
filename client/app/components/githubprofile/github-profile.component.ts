@@ -11,18 +11,21 @@ import { Subject } from 'rxjs/Subject';
     template: `<div *ngFor="let userData of user | async" class="profile">
         <div class="prf-pdng" *ngIf="userData.avatar_url">
             <a href="{{userData?.html_url}}">
-                <img src="{{userData?.avatar_url}}" class="center-block img-responsive img-thumbnail" alt="{{userData?.name}}" width="200px"/>
+                <img src="{{userData?.avatar_url}}" [class.center-block]="!profilePage" class="img-responsive img-thumbnail" alt="{{userData?.name}}" width="200px"/>
             </a>
         </div>
-        <h3 *ngIf="userData.name" class="text-center">{{userData?.name}}</h3>
+        <h3 *ngIf="userData.name" [class.text-center]="!profilePage">{{userData?.name}}</h3>
         <button *ngIf="userData.login && !profilePage" (click)="onClick(userData)" type="button" class="center-block btn btn-primary marg">{{userData?.inmemory ? "Edit Profile" : "Build Profile"}}</button>
-        <div *ngIf="profilePage" class="prf-pdng">
-
+        <div *ngIf="userData.login && profilePage" class="prf-pdng">
+            <h4 *ngIf="userData.blog">Blog : <a href="{{userData.blog}}">{{userData.blog}}</a></h4>
+            <h4 *ngIf="userData.location">Location : {{userData.location}}</h4>
+            <h4 *ngIf="userData.company">Company : {{userData.company}}</h4>
+            <img src="//logo.clearbit.com/{{userData.company}}.com?size=80">
         </div>
     </div>`,
     styles: [`
         .prf-pdng {
-            margin: 20px;
+            margin: 20px 0 20px 0;
         }
         .profile {
             margin-bottom: 20px;
