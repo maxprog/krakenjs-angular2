@@ -10,7 +10,7 @@ import { HeaderComponet } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GithubUserComponent } from './components/githubuser/github-user.component';
 import { GithubProfileComponent } from './components/githubprofile/github-profile.component'
-
+import { GithubDashComponent } from './components/githubdash/github-dash.component';
 //Services
 import { GithubProfileService } from './services/github-profile.service';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
@@ -24,6 +24,10 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
             {
                 path: 'home',
                 component: GithubUserComponent
+            },
+            {
+                path: 'dashboard',
+                component: GithubDashComponent
             },
             {
                 path: 'profile/:login',
@@ -41,7 +45,8 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
         HeaderComponet,
         FooterComponent,
         GithubUserComponent,
-        GithubProfileComponent
+        GithubProfileComponent,
+        GithubDashComponent
     ],
     providers: [
         GithubProfileService,

@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
             <div class="wrapper">
                 <ul class="nav nav-pills pagenav">
                     <li role="presentation" routerLinkActive="active"><a routerLink="/home">Home</a></li>
+                    <li role="presentation" routerLinkActive="active"><a routerLink="/dashboard">Dashboard</a></li>
                     <!--<li role="presentation" [class.disabled]="!routerLinkActive"><a href="#">Profile</a></li>
                     <li role="presentation" [class.disabled]="!routerLinkActive"><a href="#">Dashboard</a></li>-->
                 </ul>
