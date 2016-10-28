@@ -9,5 +9,6 @@ module.exports = function (router) {
         res.sendFile('/', {root: Path.resolve(__dirname, '../web/')});
     });
     router.get('/profile', ProfileController.getProfile);
+    router.get('/profile/all', ProfileController.getAllProfile);
     router.post('/profile', ProfileController.postProfile);
 }

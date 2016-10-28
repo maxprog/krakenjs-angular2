@@ -15,6 +15,20 @@ function getProfile (req, res) {
     res.json(model);
 };
 
+function getAllProfile (req, res) {
+
+    let model = {};
+    let user;
+
+    user = InMemoryDB.findAll();
+    if (user && user.length > 0) {
+        model = user.map(userData => new ProfileModel(userData));
+    }
+
+
+    res.json(model);
+};
+
 function postProfile (req, res) {
     let model = {};
     let insertData;
@@ -28,5 +42,6 @@ function postProfile (req, res) {
 
 module.exports = {
     getProfile: getProfile,
+    getAllProfile: getAllProfile,
     postProfile: postProfile
 }
