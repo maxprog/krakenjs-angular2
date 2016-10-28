@@ -41,6 +41,13 @@ function insert(user) {
     }
 }
 
+function findAll() {
+    if(!Users) {
+        return;
+    }
+    return Users.find();
+}
+
 function findByLogin(login) {
     if(!Users) {
         return;
@@ -51,5 +58,6 @@ function findByLogin(login) {
 module.exports = {
     init: init,
     insert: insert,
-    findByLogin: findByLogin
+    findByLogin: findByLogin,
+    findAll:findAll
 };
