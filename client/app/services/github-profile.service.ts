@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 const GITHUB_API = 'https://api.github.com/users/';
 const PROFILE_API = '/profile';
+const PROFILE_API_ALL = '/profile/all';
 
 @Injectable()
 export class GithubProfileService {
@@ -66,5 +67,15 @@ export class GithubProfileService {
             })
             //get the profile data from guthub
             .catch(() => this.getProfileFromGithub(username));
+    }
+
+    getAllProfile():Observable<User[]> {
+        return this.http.get(`${PROFILE_API_ALL}`)
+            .filter(resp => resp.status === 200)
+            .map(resp => {
+                let user = resp.json() as [User]
+                return user;
+            })
+            .catch(() => Observable.of([new User()]));
     }
 }
