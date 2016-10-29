@@ -28,6 +28,8 @@ This application adds the Angular2 features only at the client side. For angular
     > cd krakenjs-angular2
     > npm i
     > npm run typings install (If typings are not installed by default)
+    > npm start:dev
+    (For environments other than development)
     > npm start (This executes, npm run build && node server. tsc && webpack are executed as part of npm run build)
 
 ```
@@ -35,7 +37,7 @@ This application adds the Angular2 features only at the client side. For angular
 Application can be accessible at http://localhost:8000
 
 
-## Project skeleton
+## Project structure
 
 #### Server (kraken-js app)
 

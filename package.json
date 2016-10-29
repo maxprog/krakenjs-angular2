@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ava test",
+    "start:dev": "node server",
     "start": "npm run build && node server",
     "lint": "eslint .",
     "postinstall": "typings install",
